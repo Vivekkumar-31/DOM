@@ -1,28 +1,24 @@
+var grow = 0
 var btn  = document.querySelector('button')
-var main = document.querySelector('main')
+var h2   = document.querySelector('h2')
+var inner= document.querySelector('.inner')
 
-btn.addEventListener('click',function(){
-    var div = document.createElement('div')
-
-    var x = Math.random()*100
-    var y = Math.random()*100
-    var r = Math.random()*360
-    var scl = Math.random()*3
-    var c1 = Math.random()*256
-    var c2 = Math.random()*256
-    var c3 = Math.random()*256
-
-    div.style.height = '50px'
-    div.style.width = '50px'
-    div.style.position = 'absolute'
-
+btn.addEventListener('click',function() {
+  btn.style.pointerEvents = 'none'
+  
+     var num = 50 + Math.floor(Math.random()*50)
     
-    div.style.left = x+'%'
-    div.style.top = y+'%'
-    div.style.rotate = r+'deg'
-    div.style.scale = scl
-    div.style.background = `rgb(${c1},${c2},${c3})`
+    console.log('Your file will be downloaded in',num/10,'seconds');
+  
+    var int = setInterval(() => {
+    grow++
+    h2.innerHTML = grow+'%'
+    inner.style.width = grow+'%'
+   }, num); 
 
-    main.appendChild(div)
-
+   setTimeout(() => {
+   clearInterval(int)
+   btn.innerHTML = 'downloaded'
+   btn.style.opacity = 0.6
+   },num*100)
 })
