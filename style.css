@@ -7,12 +7,30 @@ html,body{
     height: 100%;
     width: 100%;
 }
-h1{
-    font-size: 100px;
+body{
+    overflow: hidden;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 button{
-    background-color: darkcyan;
-    padding: 10px 20px;
-    margin-top: 50px;
-    
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: crimson;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    position: relative;
+    z-index: 9;
+}
+button:active{
+    scale: 0.95;
 }

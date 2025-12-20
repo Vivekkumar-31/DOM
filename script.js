@@ -1,16 +1,28 @@
-var inc = document.querySelector('#inc')
-var dec = document.querySelector('#dec')
-var h1  = document.querySelector('h1')
+var btn  = document.querySelector('button')
+var main = document.querySelector('main')
 
-var a = 0
+btn.addEventListener('click',function(){
+    var div = document.createElement('div')
 
-inc.addEventListener('click',function(){
-    a++
-   h1.innerHTML = a
+    var x = Math.random()*100
+    var y = Math.random()*100
+    var r = Math.random()*360
+    var scl = Math.random()*3
+    var c1 = Math.random()*256
+    var c2 = Math.random()*256
+    var c3 = Math.random()*256
 
-})
-dec.addEventListener('click',function(){
-    a--
-   h1.innerHTML = a
+    div.style.height = '50px'
+    div.style.width = '50px'
+    div.style.position = 'absolute'
+
+    
+    div.style.left = x+'%'
+    div.style.top = y+'%'
+    div.style.rotate = r+'deg'
+    div.style.scale = scl
+    div.style.background = `rgb(${c1},${c2},${c3})`
+
+    main.appendChild(div)
 
 })
