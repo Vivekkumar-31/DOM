@@ -8,19 +8,16 @@ html,body{
     width: 100%;background-color: black;
 
 }
-:root {
-    --x:100px;
-    --y:100px;
-}
 body{
-  
-    background-image:url(https://i.pinimg.com/736x/82/fa/d1/82fad1af4b684d4ccc584445118ba6b9.jpg) ;
-    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.box{
-    height:100% ;
-    width: 100%;
-    background: radial-gradient(100px at var(--x) var(--y),rgba(255, 255, 255, 0.111) ,rgb(0, 7, 0));
+p{
+    color: rgb(14, 255, 14);
+    font-size: 2rem;
+    font-family: monospace;
+    cursor: pointer;
 }
 
 
